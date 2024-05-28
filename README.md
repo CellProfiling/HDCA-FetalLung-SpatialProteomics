@@ -1,5 +1,5 @@
 # HDCA-FetalLung-SpatialProteomics
-Custom software written for analysis of spatial proteomics data from the fetal lung acquired in the HDCA project. More descriptions follow here shortly.
+Custom software written for analysis of spatial proteomics data from fetal lung acquired in the HDCA project. More descriptions follow here shortly.
 
 ## Reusing 
 The software provided in this repository was developed for data analysis as presented in [this preprint](https://doi.org/10.1101/2024.01.25.577163). 
