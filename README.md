@@ -1,7 +1,7 @@
 # HDCA-FetalLung-SpatialProteomics
 Custom software written for analysis of spatial proteomics data from fetal lung acquired in the HDCA project. More descriptions follow here shortly.
 
-## Reusing 
+## Reusing the code? How to cite this software?
 The software provided in this repository was developed for data analysis as presented in [this preprint](https://doi.org/10.1101/2024.01.25.577163). 
 When using the code in this repository, please cite this preprint:
 ```
