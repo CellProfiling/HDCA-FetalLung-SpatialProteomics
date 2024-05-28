@@ -1,2 +1,13 @@
 # HDCA-FetalLung-SpatialProteomics
-Custom software written for analysis of spatial proteomics data from the fetal lung acquired in the HDCA project.
+Custom software written for analysis of spatial proteomics data from the fetal lung acquired in the HDCA project. More descriptions follow here shortly.
+
+## Reusing 
+The software provided in this repository was developed for data analysis as presented in [this preprint](https://doi.org/10.1101/2024.01.25.577163). 
+When using the code in this repository, please cite this preprint:
+```
+High-parametric protein maps reveal the spatial organization in early-developing human lung
+Sanem Sariyar, Alexandros Sountoulidis, Jan Niklas Hansen, Sergio Marco Salas, Mariya Mardamshina,
+Anna Martinez Casals, Frederic Ballllosera Navarro, Zaneta Andrusivova, Xiaofei Li, Paulo Czarnewski,
+Joakim Lundeberg, Sten Linnarsson, Mats Nilsson, Erik Sundström, Christos Samakovlis, Emma Lundberg, Burcu Ayoglu.
+bioRxiv 2024.01.25.577163; doi: https://doi.org/10.1101/2024.01.25.577163
+```
