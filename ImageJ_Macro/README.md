@@ -23,3 +23,10 @@ Joakim Lundeberg, Sten Linnarsson, Mats Nilsson, Erik Sundström, Christos Samak
 bioRxiv 2024.01.25.577163; doi: https://doi.org/10.1101/2024.01.25.577163
 ```
 
+## How to apply this code = run the Imagej macro?
+- If you do not have the open-source scientific image analysis software FIJI, download it from the [FIJI homepage](https://fiji.sc/). FIJI is simply installed by unzipping the downloaded repository (Linux, Windows) or placing the downloaded app file (Mac) somewhere on your computer.
+- Launch FIJI.
+- Open the image you aim to analyze in FIJI - it needs to be a multi-slice stack image, where each slice represents a channel. 
+- Drag and drop the .ijm macro file from this repository into the small FIJI window, in turn the macro editor will open.
+- Click run in the macro editor and follow the instructions and prompts by the macro.
+
