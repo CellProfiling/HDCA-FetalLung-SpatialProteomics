@@ -84,7 +84,7 @@ setAutoThreshold("Triangle dark no-reset");
 run("Convert to Mask");
 //run("16-bit");
 //setMinAndMax(0, 512);
-run("Maximum...", "radius=20");
+run("Maximum...", "radius=5"); //20
 
 // Duplicate CD45 channel
 selectImage(imagename + ".tif");
@@ -111,7 +111,13 @@ selectImage("Result of " + imagename + "-1.tif");
 setOption("ScaleConversions", true);
 run("8-bit");
 roiManager("Select", roiManager("count")-1); //Add the mask drawn by user to limit what is detected
-run("Analyze Particles...", "size=3000-Infinity show=Masks clear");
+run("Analyze Particles...", "size=2000-Infinity show=Masks clear include");
+
+// Allow custom edits
+selectImage("Mask of Result of " + imagename + "-1.tif");
+waitForUser("ACTION REQUIRED","Please customize the mask if needed!\nRemove or draw and add particles.\nTo remove particles, enncircle particles and press DEL.\nTo add particles, draw a ROI for the particle and press F on the keyboard.\nConfirm when done.");
+selectImage("Mask of Result of " + imagename + "-1.tif");
+saveAs("Tiff", path + imagename + "_CustomizedCD144AndACTA2Selection.tif");
 
 // Find ACTA2 particles with overlap to comnbined mask to get the originally "big" masks circumscribing ACTA2 and CD144 signals (Arteries)
 // Filter all ACTA2 particles and delete if they are not overlapping with the filtered data
@@ -120,7 +126,7 @@ run("8-bit");
 run("Analyze Particles...", "size=0-Infinity show=Nothing clear add");
 run("Clear Results");
 nR = roiManager("count");
-selectImage("Mask of Result of " + imagename + "-1.tif");
+selectImage(imagename + "_CustomizedCD144AndACTA2Selection.tif");
 for (i = nR-1; i >= 0; i--) {
 	roiManager("Select", i);
 	run("Measure");
@@ -150,9 +156,17 @@ for (i = nR-1; i >= 0; i--) {
 run("Select None");
 roiManager("Show None");
 
+// Allow to customize the detected arteries
+selectImage(imagename + "-1-1.tif");
+rename(imagename + "_CustomizedArterieMask.tif");
+waitForUser("ACTION REQUIRED","Please customize the detected arteries if needed!\nRemove false positive arteries by enncircling them and press DEL.\nConfirm dialog when you are done");
+rename(imagename + "_CustomizedArterieMask.tif");
+saveAs("Tiff", path + imagename + "_CustomizedArterieMask.tif");
+
+
 //Enlarge the mask of particles to be considered arteries by 80 px to include closeby immune cells
 //80 px corresponds to approximately 40 micron in our case
-selectImage(imagename + "-1-1.tif");
+selectImage(imagename + "_CustomizedArterieMask.tif");
 run("Maximum...", "radius=80");
 
 // NEXT CREATE MASKS FOR IMMUNE CELLS IN PROXIMITY
@@ -160,17 +174,17 @@ run("Maximum...", "radius=80");
 roiManager("Open", path + imagename + "_UserSelection.roi");
 
 // Create mask for immune cells in proximity
-imageCalculator("AND create", imagename + "-1-1.tif", imagename + "-3.tif");
-selectImage("Result of " + imagename + "-1-1.tif");
+imageCalculator("AND create", imagename + "_CustomizedArterieMask.tif", imagename + "-3.tif");
+selectImage("Result of " + imagename + "_CustomizedArterieMask.tif");
 rename("Mask_CloseCells.tif");
 roiManager("Select", roiManager("count")-1); // Select user mask
 run("Clear Outside");
 
 // Create mask for immune cells in distance
-selectImage(imagename + "-1-1.tif");
+selectImage(imagename + "_CustomizedArterieMask.tif");
 run("Invert");
-imageCalculator("AND create", imagename + "-1-1.tif", imagename + "-3.tif");
-selectImage("Result of " + imagename + "-1-1.tif");
+imageCalculator("AND create", imagename + "_CustomizedArterieMask.tif", imagename + "-3.tif");
+selectImage("Result of " + imagename + "_CustomizedArterieMask.tif");
 rename("Mask_DistantCells.tif");
 roiManager("Select", roiManager("count")-1); // Select user mask
 run("Clear Outside");
@@ -178,15 +192,15 @@ run("Clear Outside");
 // Clean up
 selectImage(imagename + "-1.tif");
 close();
-selectImage(imagename + "-1-1.tif");
-close();
 selectImage(imagename + "-2.tif");
 close();
 selectImage(imagename + "-3.tif");
 close();
 selectImage("Result of " + imagename + "-1.tif");
 close();
-selectImage("Mask of Result of " + imagename + "-1.tif");
+selectImage(imagename + "_CustomizedArterieMask.tif");
+close();
+selectImage(imagename + "_CustomizedCD144AndACTA2Selection.tif");
 close();
 
 // Measure intensities for distant cells - Create ROI
