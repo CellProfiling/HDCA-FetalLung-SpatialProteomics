@@ -1,5 +1,5 @@
 # HDCA-FetalLung-SpatialProteomics
-Custom software written for analysis of spatial proteomics data from fetal lung acquired in the [Human Developmental Cell Atlas project](https://www.humancellatlas.org/dca/). More descriptions follow here shortly.
+Custom software written for analysis of spatial proteomics data from fetal lung acquired in the [Human Developmental Cell Atlas project](https://hdca-sweden.scilifelab.se/). More descriptions follow here shortly.
 
 ## Reusing the code? How to cite this software?
 The software provided in this repository was developed for data analysis as presented in [this preprint](https://doi.org/10.1101/2024.01.25.577163). 
