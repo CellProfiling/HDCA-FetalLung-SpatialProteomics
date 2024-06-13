@@ -1,7 +1,15 @@
-# HDCA-FetalLung-SpatialProteomics
-Custom software written for analysis of spatial proteomics data from fetal lung acquired in the [Human Developmental Cell Atlas project](https://hdca-sweden.scilifelab.se/). More descriptions follow here shortly.
+---
 
-## Reusing the code? How to cite this software?
+If you are not viewing this repository on github, please check the original repository (https://github.com/CellProfiling/HDCA-FetalLung-SpatialProteomics/) for potential updates!
+
+---
+
+# HDCA-FetalLung-SpatialProteomics
+Custom software written for analysis of spatial proteomics data from fetal lung acquired in the [Human Developmental Cell Atlas project](https://hdca-sweden.scilifelab.se/). 
+The [example_pipelines folder](https://github.com/CellProfiling/HDCA-FetalLung-SpatialProteomics/tree/main/example_pipelines) contains example python code applied to analyze the single-cell data derived from pipex analysis of spatial proteomics images.
+The [ImageJ_Macro folder](https://github.com/CellProfiling/HDCA-FetalLung-SpatialProteomics/tree/main/ImageJ_Macro) contains the imagej macro that was used in the preprint for a pipex-independent analysis of marker expression in artery-close immune cells.
+
+## Reusing the code? How to cite this software / data?
 The software provided in this repository was developed for data analysis as presented in [this preprint](https://doi.org/10.1101/2024.01.25.577163). 
 When using the code in this repository, please cite this preprint:
 ```
