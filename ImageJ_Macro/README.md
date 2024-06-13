@@ -4,16 +4,7 @@ This folder contains an ImageJ macro for analyzing spatial proteomics data from 
 Software: (c) 2024, Jan N. Hansen
 
 ## Reusing the code? How to cite this software?
-The software provided in this repository was developed for data analysis as presented in [this preprint](https://doi.org/10.1101/2024.01.25.577163). 
-When using the code in this repository, cite this preprint:
-
-```
-High-parametric protein maps reveal the spatial organization in early-developing human lung
-Sanem Sariyar, Alexandros Sountoulidis, Jan Niklas Hansen, Sergio Marco Salas, Mariya Mardamshina,
-Anna Martinez Casals, Frederic Ballllosera Navarro, Zaneta Andrusivova, Xiaofei Li, Paulo Czarnewski,
-Joakim Lundeberg, Sten Linnarsson, Mats Nilsson, Erik Sundström, Christos Samakovlis, Emma Lundberg, Burcu Ayoglu.
-bioRxiv 2024.01.25.577163; doi: https://doi.org/10.1101/2024.01.25.577163
-```
+See readme file in the [top folder of this repository](https://github.com/CellProfiling/HDCA-FetalLung-SpatialProteomics/tree/main).
 
 ## How to apply this code = run the Imagej macro?
 - If you do not have the open-source scientific image analysis software FIJI, download it from the [FIJI homepage](https://fiji.sc/). FIJI is simply installed by unzipping the downloaded repository (Linux, Windows) or placing the downloaded app file (Mac) somewhere on your computer.
