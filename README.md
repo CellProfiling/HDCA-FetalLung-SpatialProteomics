@@ -10,8 +10,13 @@ The [example_pipelines folder](https://github.com/CellProfiling/HDCA-FetalLung-S
 The [ImageJ_Macro folder](https://github.com/CellProfiling/HDCA-FetalLung-SpatialProteomics/tree/main/ImageJ_Macro) contains the imagej macro that was used in the preprint for a pipex-independent analysis of marker expression in artery-close immune cells.
 
 ## Reusing the code? How to cite this software / data?
-The software provided in this repository was developed for data analysis as presented in [this preprint](https://doi.org/10.1101/2024.01.25.577163). 
-When using the code in this repository, please cite this preprint:
+The software provided in this repository is licensed under the [MIT license](https://github.com/CellProfiling/HDCA-FetalLung-SpatialProteomics/blob/main/LICENSE) provided in the repository. Please note the individual copyright notices in the ImageJ_Macro and example_pipelines folders, individually applying to the ImageJ_Macro or example_pipelines.
+
+The software was developed for data analysis as presented in [this preprint by Sariyar et al.](https://doi.org/10.1101/2024.01.25.577163). 
+
+When using the code in this repository, please cite this preprint.
+
+Long citation:
 ```
 High-parametric protein maps reveal the spatial organization in early-developing human lung
 Sanem Sariyar, Alexandros Sountoulidis, Jan Niklas Hansen, Sergio Marco Salas, Mariya Mardamshina,
