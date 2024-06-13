@@ -1,6 +1,6 @@
 /**
- * This macro has been written within the Lundberg lab by Jan N. Hansen, jan.hansen@scilifelab.se, in May 2024.
- * All rights reserved.
+ * This macro has been written within the Lundberg lab by Jan N. Hansen, in May 2024.
+ * See the github repository for more detailed descriptions, licensing, and citation information: https://github.com/CellProfiling/HDCA-FetalLung-SpatialProteomics/
  * 
  * This program is provided in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -13,7 +13,7 @@ cd144 = 17;
 cd45 = 20;
 
 Dialog.create("ARTERY CLOSE IMMUNE CELL ANALYSIS");
-Dialog.addHelp("https://github.com/CellProfiling/");
+Dialog.addHelp("https://github.com/CellProfiling/HDCA-FetalLung-SpatialProteomics/");
 
 Dialog.setInsets(0, 0, 0);
 Dialog.addMessage("This macro was developed within the CellProfiling / Lundberg group.");
