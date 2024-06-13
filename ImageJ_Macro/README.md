@@ -3,8 +3,6 @@ This folder contains an ImageJ macro for analyzing spatial proteomics data from 
 
 Software: (c) 2024, Jan N. Hansen
 
-More information and licensing information is going to follow here shortly.
-
 ## Reusing the code? How to cite this software?
 The software provided in this repository was developed for data analysis as presented in [this preprint](https://doi.org/10.1101/2024.01.25.577163). 
 When using the code in this repository, cite this preprint:
