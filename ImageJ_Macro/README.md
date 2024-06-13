@@ -1,9 +1,3 @@
----
-
-If you are not viewing this repository on github, please check the original repository (https://github.com/CellProfiling/HDCA-FetalLung-SpatialProteomics/) for potential updates!
-
----
-
 # HDCA-FetalLung-SpatialProteomics ImageJ macro
 This folder contains an ImageJ macro for analyzing spatial proteomics data from fetal lung tissue (acquired in the [Human Developmental Cell Atlas project](https://hdca-sweden.scilifelab.se/)) with the aim to measure intensity information in artery-close immune cells vs artery-distant immune cells and without using a nucleus-channel-based single-cell segmentation. Instead, this macro uses image processing and simple intensity thresholding to detect vessel and and immune cell regions, and discerns immune cell regions depending on their distance to the vessel regions.
 
